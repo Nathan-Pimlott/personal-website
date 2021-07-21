@@ -11,7 +11,7 @@ const classes = createUseStyles({
     },
     titleContainer: {
         fontWeight: "200 !important",
-        padding: 50,
+        padding: 100,
     },
     headerContainer: {
         width: "100%",

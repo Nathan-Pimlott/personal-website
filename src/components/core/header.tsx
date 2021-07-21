@@ -1,22 +1,11 @@
 import React, { useEffect } from "react";
-import {
-    AppBar,
-    Toolbar,
-    IconButton,
-    Badge,
-    Typography,
-    Button,
-    InputBase,
-    TextField,
-    Input,
-} from "@material-ui/core";
-import { AccountCircle, Search, ShoppingBasket } from "@material-ui/icons";
+import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
+import Lottie from "react-lottie";
 
+import * as waveAnimationData from "../../assets/lottie/wave.json";
 import Classes from "../../styles";
 import { withRouter } from "react-router";
 import { observer } from "mobx-react-lite";
-
-const Logo = require("../../assets/profilepic.png");
 
 const Header = () => {
     const classes = Classes();
@@ -24,19 +13,66 @@ const Header = () => {
     return (
         <div className={classes.headerContainer}>
             <AppBar position="static">
-                <Toolbar>
-                    <img
-                        src={Logo}
-                        alt="profilepicture"
-                        style={{ width: 40, height: 40, borderRadius: 50 }}
-                    />
-
+                <Toolbar style={{ display: "flex" }}>
                     <Typography
                         variant="h6"
                         style={{ color: "white", marginLeft: 20 }}
                     >
-                        Nathan Pimlott
+                        Nathan | ネイサン
                     </Typography>
+
+                    <div
+                        style={{
+                            flex: 1,
+                            display: "flex",
+                            justifyContent: "flex-end",
+                        }}
+                    >
+                        <Button
+                            style={{
+                                cursor: "pointer",
+                                padding: "0 20px",
+                                color: "white",
+                                textTransform: "none",
+                            }}
+                            href="/#/"
+                        >
+                            Home
+                        </Button>
+                        <Button
+                            style={{
+                                cursor: "pointer",
+                                padding: "0 20px",
+                                color: "white",
+                                textTransform: "none",
+                            }}
+                            href="/#/about-me"
+                        >
+                            About Me
+                        </Button>
+                        <Button
+                            style={{
+                                cursor: "pointer",
+                                padding: "0 20px",
+                                color: "white",
+                                textTransform: "none",
+                            }}
+                            href="/#/my-work"
+                        >
+                            My Work
+                        </Button>
+                        <Button
+                            style={{
+                                cursor: "pointer",
+                                padding: "0 20px",
+                                color: "white",
+                                textTransform: "none",
+                            }}
+                            href="/#/contact-me"
+                        >
+                            Contact Me
+                        </Button>
+                    </div>
                 </Toolbar>
             </AppBar>
         </div>
