@@ -57,6 +57,17 @@ const Header = () => {
                                 color: "white",
                                 textTransform: "none",
                             }}
+                            href="/#/experience"
+                        >
+                            Experience
+                        </Button>
+                        <Button
+                            style={{
+                                cursor: "pointer",
+                                padding: "0 20px",
+                                color: "white",
+                                textTransform: "none",
+                            }}
                             href="/#/my-work"
                         >
                             My Work

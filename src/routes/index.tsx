@@ -8,14 +8,14 @@ import {
 
 import Header from "../components/core/header";
 import Footer from "../components/core/footer";
-import Home from "../components/home";
+import Layout from "../components/layout";
 
 function Routes() {
     return (
         <HashRouter>
             <Header />
             <Switch>
-                <Route path="/" component={Home} />
+                <Route path="/" component={Layout} />
             </Switch>
             <Footer />
         </HashRouter>
