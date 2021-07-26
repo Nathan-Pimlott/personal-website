@@ -17,16 +17,15 @@ const defaultOptions = {
     },
 };
 
-function HomeIndex() {
+export default function HomeIndex() {
     const classes = Classes();
 
     return (
-        <div>
+        <div id="home">
             <Grid
                 container
                 justify="center"
-                style={{ backgroundColor: "white" }}
-                className={classes.titleContainer}
+                className={classes.sectionContainer}
             >
                 <Grid
                     item
@@ -35,27 +34,20 @@ function HomeIndex() {
                     md={8}
                     lg={6}
                     xl={4}
-                    style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                    }}
+                    className={classes.homeContainer}
                 >
-                    <img
-                        src={Logo}
-                        style={{ height: 200, width: 200, borderRadius: 100 }}
-                    />
+                    <img src={Logo} className={classes.mainPhoto} />
                     <Typography
                         variant="h2"
                         id="home-title"
-                        style={{ textAlign: "center", marginTop: 20 }}
+                        className={classes.homeTitle}
                     >
                         Hi 👋 I'm Nathan.
                     </Typography>
                     <Typography
                         variant="h3"
                         id="home-subtitle"
-                        style={{ textAlign: "center" }}
+                        className={classes.alignCenter}
                     >
                         I write code & play games.
                     </Typography>
@@ -72,5 +64,3 @@ function HomeIndex() {
         </div>
     );
 }
-
-export default HomeIndex;

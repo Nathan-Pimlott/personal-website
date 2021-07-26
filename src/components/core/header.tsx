@@ -7,7 +7,7 @@ import Classes from "../../styles";
 import { withRouter } from "react-router";
 import { observer } from "mobx-react-lite";
 
-const Header = () => {
+export default function Header() {
     const classes = Classes();
 
     return (
@@ -35,7 +35,7 @@ const Header = () => {
                                 color: "white",
                                 textTransform: "none",
                             }}
-                            href="/#/"
+                            href="#home"
                         >
                             Home
                         </Button>
@@ -46,7 +46,7 @@ const Header = () => {
                                 color: "white",
                                 textTransform: "none",
                             }}
-                            href="/#/about-me"
+                            href="#about"
                         >
                             About Me
                         </Button>
@@ -57,7 +57,7 @@ const Header = () => {
                                 color: "white",
                                 textTransform: "none",
                             }}
-                            href="/#/experience"
+                            href="#experience"
                         >
                             Experience
                         </Button>
@@ -68,9 +68,9 @@ const Header = () => {
                                 color: "white",
                                 textTransform: "none",
                             }}
-                            href="/#/my-work"
+                            href="#projects"
                         >
-                            My Work
+                            My Projects
                         </Button>
                         <Button
                             style={{
@@ -79,7 +79,7 @@ const Header = () => {
                                 color: "white",
                                 textTransform: "none",
                             }}
-                            href="/#/contact-me"
+                            href="#contact"
                         >
                             Contact Me
                         </Button>
@@ -88,6 +88,4 @@ const Header = () => {
             </AppBar>
         </div>
     );
-};
-
-export default withRouter(observer(Header));
+}

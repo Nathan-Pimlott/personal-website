@@ -1,22 +1,16 @@
 import React from "react";
+import moment from "moment";
 import { Typography } from "@material-ui/core";
 
 import Classes from "../../styles";
 
-function Footer() {
+export default function Footer() {
     const classes = Classes();
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "row",
-                padding: 20,
-                backgroundColor: "white",
-            }}
-        >
-            Footer
+        <div className={classes.footerContainer}>
+            <Typography className={classes.footerText}>
+                © Nathan Pimlott {moment().format("YYYY")}
+            </Typography>
         </div>
     );
 }
-
-export default Footer;
