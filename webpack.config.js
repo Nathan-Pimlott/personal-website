@@ -6,6 +6,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 const webpack = require("webpack");
 const dotenv = require("dotenv");
+const BundleAnalyzerPlugin =
+    require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 dotenv.config();
 
@@ -68,6 +70,7 @@ module.exports = {
             "process.env": JSON.stringify(dotenv.config().parsed),
         }),
         new NodePolyfillPlugin(),
+        new BundleAnalyzerPlugin(),
     ],
     devServer: {
         historyApiFallback: true,

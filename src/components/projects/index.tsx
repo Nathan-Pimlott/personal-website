@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Typography, Grid } from "@material-ui/core";
-import moment from "moment";
 
 import Classes from "../../styles";
 

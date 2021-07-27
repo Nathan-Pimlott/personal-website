@@ -1,6 +1,9 @@
 import * as React from "react";
 import { Typography } from "@material-ui/core";
-import moment from "moment";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.extend(relativeTime);
 
 import Classes from "../../styles";
 
@@ -22,7 +25,7 @@ export default function AboutMeIndex() {
                 </Typography>
                 <Typography className={classes.marginTop}>
                     I have been a developer now for{" "}
-                    {moment("2015-09-01").fromNow(true)} professionally and have
+                    {dayjs("2015-09-01").from(dayjs())} professionally and have
                     worked with a variety of systems, tools and development
                     methods over the years with team sizes ranging from a 2
                     person team to several 10+ person teams. I'm glad I've had

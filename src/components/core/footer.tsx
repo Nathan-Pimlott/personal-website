@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment";
+import dayjs from "dayjs";
 import { Typography } from "@material-ui/core";
 
 import Classes from "../../styles";
@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <div className={classes.footerContainer}>
             <Typography className={classes.footerText}>
-                © Nathan Pimlott {moment().format("YYYY")}
+                © Nathan Pimlott {dayjs().format("YYYY")}
             </Typography>
         </div>
     );
