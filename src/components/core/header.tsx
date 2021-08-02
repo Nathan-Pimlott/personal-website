@@ -11,7 +11,6 @@ import Lottie from "react-lottie";
 import * as waveAnimationData from "../../assets/lottie/wave.json";
 import Classes from "../../styles";
 import { withRouter } from "react-router";
-import { observer } from "mobx-react-lite";
 
 function ElevationScroll(props) {
     const { children, window } = props;

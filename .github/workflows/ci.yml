@@ -4,11 +4,10 @@ jobs:
   unit-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
       - name: Install dependencies
-        run: npm install
+        run: npm install --production
       - name: Run build
-        run: npm build
+        run: npm run build
       - name: Run unit tests
         run: npm run test:unit
   # THESE AREN'T WORKING AT THE MINUTE...
