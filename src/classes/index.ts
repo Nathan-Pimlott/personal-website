@@ -13,11 +13,11 @@ const classes = createUseStyles({
         marginTop: "50px !important",
     },
     sectionContainer: {
-        padding: "100px !important",
+        padding: "100px 20px !important",
         backgroundColor: "white !important",
     },
     titleContainer: {
-        padding: "100px !important",
+        padding: "100px 20px !important",
     },
     title: {
         fontWeight: "200 !important",
@@ -34,9 +34,42 @@ const classes = createUseStyles({
         backgroundColor: `${primaryColor} !important`,
     },
     headerTitle: {
-        flex: "none !important",
-        color: "white !important",
-        cursor: "pointer !important",
+        color: "white",
+        marginLeft: 20,
+    },
+    headerButtonsOuterContainer: {
+        flex: 1,
+        display: "flex",
+        justifyContent: "flex-end",
+    },
+    headerButtonsInnerContainer: {
+        position: "absolute",
+        top: 56,
+        right: 0,
+        left: 0,
+        height: 0,
+        backgroundColor: "#ededed",
+        borderRadius: "0 0 5px 5px",
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+    },
+    headerButtonsInnerContainerOpen: {
+        height: "250px !important",
+    },
+    headerMobileButton: {
+        cursor: "pointer",
+        padding: "0 20px",
+        color: "black",
+        textTransform: "none",
+        textDecoration: "none",
+        margin: "20px auto",
+    },
+    headerButton: {
+        cursor: "pointer",
+        padding: "0 20px",
+        color: "white",
+        textTransform: "none",
     },
     //// HEADER
     link: {
@@ -78,10 +111,6 @@ const classes = createUseStyles({
         marginTop: 20,
     },
     //// HOME
-    lottie: {
-        margin: "auto",
-        backgroundColor: "white",
-    },
 });
 
 export default classes;

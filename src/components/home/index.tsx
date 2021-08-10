@@ -3,7 +3,7 @@ import { Typography, Grid } from "@material-ui/core";
 import Lottie from "react-lottie";
 
 import * as waveAnimationData from "../../assets/lottie/wave.json";
-import Classes from "../../styles";
+import Classes from "../../classes";
 
 const Logo = require("../../assets/profilepic.png");
 
@@ -24,16 +24,15 @@ export default function HomeIndex() {
         <div id="home">
             <Grid
                 container
-                justify="center"
+                justifyContent="center"
                 className={classes.sectionContainer}
             >
                 <Grid
                     item
-                    xs={12}
-                    sm={10}
-                    md={8}
-                    lg={6}
-                    xl={4}
+                    sm={12}
+                    md={10}
+                    lg={8}
+                    xl={6}
                     className={classes.homeContainer}
                 >
                     <img src={Logo} className={classes.mainPhoto} />
@@ -59,6 +58,7 @@ export default function HomeIndex() {
                 width="100%"
                 isStopped={false}
                 isPaused={false}
+                // Lottie doesn't take a className prop. Maybe this can be wrapped in a container?
                 style={{ margin: "auto", backgroundColor: "white" }}
             />
         </div>
