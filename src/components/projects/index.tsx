@@ -21,14 +21,7 @@ export default function ProjectsIndex() {
                         <Typography variant="h4">Personal website</Typography>
                         <Typography className={classes.marginTop}>
                             This website is built using ReactJs & Webpack and
-                            uses components & styles from{" "}
-                            <a
-                                className={classes.link}
-                                href="https://material-ui.com/"
-                            >
-                                Material UI
-                            </a>
-                            .
+                            uses components & styles from Material UI.
                         </Typography>
                         <Typography>
                             Feel free to check out the code on my{" "}

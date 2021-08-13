@@ -5,11 +5,6 @@ const { HotModuleReplacementPlugin } = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 const webpack = require("webpack");
-const dotenv = require("dotenv");
-// const BundleAnalyzerPlugin =
-//     require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-
-dotenv.config();
 
 module.exports = {
     entry: path.resolve(__dirname, "src/index.tsx"),
@@ -66,21 +61,12 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "styles.[contentHash].css",
         }),
-        new webpack.DefinePlugin({
-            "process.env": JSON.stringify(dotenv.config().parsed),
-        }),
         new NodePolyfillPlugin(),
-        // new BundleAnalyzerPlugin(),
     ],
     devServer: {
         historyApiFallback: true,
         contentBase: path.resolve(__dirname, "src"),
         hot: true,
         port: 8080,
-        proxy: {
-            "*": "http://[::1]:3000",
-            secure: false,
-            changeOrigin: true,
-        },
     },
 };

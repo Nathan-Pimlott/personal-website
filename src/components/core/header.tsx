@@ -40,6 +40,7 @@ export default function Header() {
                         {/* Hamburger on mobile */}
                         <Hidden smUp implementation="css">
                             <IconButton
+                                id="header-mobile-menu-icon"
                                 edge="start"
                                 color="inherit"
                                 aria-label="menu"
@@ -54,6 +55,7 @@ export default function Header() {
                             </IconButton>
                         </Hidden>
                         <Typography
+                            id="header-title"
                             variant="h6"
                             className={classes.headerTitle}
                         >
@@ -66,12 +68,13 @@ export default function Header() {
                                 <div
                                     className={classnames(
                                         "accordion",
-                                        state.showMenu
-                                            ? classes.headerButtonsInnerContainerOpen
-                                            : classes.headerButtonsInnerContainer
+                                        classes.headerButtonsInnerContainer,
+                                        state.showMenu &&
+                                            classes.headerButtonsInnerContainerOpen
                                     )}
                                 >
                                     <a
+                                        id="header-mobile-home-button"
                                         className={classes.headerMobileButton}
                                         href="#home"
                                         onClick={() =>
@@ -84,6 +87,7 @@ export default function Header() {
                                         Home
                                     </a>
                                     <a
+                                        id="header-mobile-about-me-button"
                                         className={classes.headerMobileButton}
                                         href="#about"
                                         onClick={() =>
@@ -96,6 +100,7 @@ export default function Header() {
                                         About Me
                                     </a>
                                     <a
+                                        id="header-mobile-experience-button"
                                         className={classes.headerMobileButton}
                                         href="#experience"
                                         onClick={() =>
@@ -108,6 +113,7 @@ export default function Header() {
                                         Experience
                                     </a>
                                     <a
+                                        id="header-mobile-projects-button"
                                         className={classes.headerMobileButton}
                                         href="#projects"
                                         onClick={() =>
@@ -120,6 +126,7 @@ export default function Header() {
                                         My Projects
                                     </a>
                                     <a
+                                        id="header-mobile-contact-button"
                                         className={classes.headerMobileButton}
                                         href="#contact"
                                         onClick={() =>
@@ -136,30 +143,35 @@ export default function Header() {
                             {/* Menu for desktop */}
                             <Hidden xsDown implementation="css">
                                 <Button
+                                    id="header-home-button"
                                     className={classes.headerButton}
                                     href="#home"
                                 >
                                     Home
                                 </Button>
                                 <Button
+                                    id="header-about-me-button"
                                     className={classes.headerButton}
                                     href="#about"
                                 >
                                     About Me
                                 </Button>
                                 <Button
+                                    id="header-experience-button"
                                     className={classes.headerButton}
                                     href="#experience"
                                 >
                                     Experience
                                 </Button>
                                 <Button
+                                    id="header-projects-button"
                                     className={classes.headerButton}
                                     href="#projects"
                                 >
                                     My Projects
                                 </Button>
                                 <Button
+                                    id="header-contact-button"
                                     className={classes.headerButton}
                                     href="#contact"
                                 >
